@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="displaydate()" id="color">
+    <h1 id="date"></h1>
+    <button onclick="red('red')">Red</button>
+    <button onclick="red('gold')">Gold</button>
+    <button onclick="red('green')">Green</button>
+    <button onclick="red('blue')">Blue</button>
+    <button onclick="red('yellow')">yellow</button>
+    <input type="text" placeholder="enter color" id="leg">
+    <button onclick="him()">Enter</button>
+
+    <script>
+        
+
+        function daterefresh(){
+            let change = 1000
+            let timeout = setTimeout("displaydate()", change )
+        }
+        function displaydate(){
+            let date = new Date()
+            document.getElementById("date").innerHTML = date
+            daterefresh()
+        }
+        function red(color){
+            document.getElementById("color").style.backgroundColor = color
+         }
+         
+        function him(){
+            var color = document.getElementById("leg").value
+            document.getElementById("color").style.backgroundColor = color
+
+        }
+    </script>
+</body>
+</html>

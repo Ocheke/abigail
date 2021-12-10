@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>Select your country</p>
+        <select name="" id="country" onchange="world()">
+            <option value=""></option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="America">America</option>
+            <option value="London">London</option>
+        </select>
+    </div>
+    <div id="state">
+        <p>Select your state</p>
+        <select name="" id="" >
+            <option value=""></option>
+            <option value="">Benue</option>
+            <option value="">Lagos</option>
+            <option value="">Abuja</option>
+            <option value="">Calabar</option>
+            <option value="">Enugu</option>
+            <option value="">Imo</option>
+            <option value="">Rivers</option>
+            <option value="">Borno</option>
+            <option value="">Sokoto</option>
+            <option value="">Taraba</option>
+            <option value="">Edo</option>
+            <option value="">Akwa-Ibom</option>
+            <option value="">Kwara</option>
+            <option value="">Zamfara</option>
+            <option value="">Kogi</option>
+            <option value="">Ekiti</option>
+            <option value="">Niger</option>
+            <option value="">Ogun</option>
+            <option value="">Osun</option>
+            <option value="">Anambra</option>
+            <option value="">Bayelsa</option>
+            <option value="">Pleateu</option>
+            <option value="">Nassarawa</option>
+            <option value="">Kaduna</option>
+            <option value="">Kano</option>
+            <option value="">Yobe</option>
+            <option value="">Abia</option>
+            <option value="">Adamawa</option>
+            <option value="">Bauchi</option>
+            <option value="">Delta</option>
+            <option value="">Ebonyi</option>
+            <option value="">Jigawa</option>
+            <option value="">Gombe</option>
+            <option value="">Oyo</option>
+            <option value="">Katsina</option>
+            <option value="">Kebbi</option>
+        </select>
+    </div>
+    <div id="usa">
+        <p>Select your state</p>
+        <select name="" id="">
+            <option value=""></option>
+            <option value="">Washington D.C</option>
+            <option value="">New york</option>
+            <option value="">Atlanta</option>
+            <option value="">Texas</option>
+            <option value="">ohio</option>
+        </select>
+    </div>
+    <div id="uk">
+        <p>Select your state</p>
+        <select name="">
+            <option value=""></option>
+            <option value="">Manchester city</option>
+            <option value="">Chelsea</option>
+            <option value="">Northigam city</option>
+            <option value="">Liverpool</option>
+            <option value="">Brighton</option>
+            <option value="">Burney</option>
+            <option value="">Everton</option>
+            <option value="">Leicister city</option>
+            <option value="">Wolfs</option>
+            <option value="">Westham</option>
+            <option value="">Astonvilla</option>
+            <option value="">Arsena</option>
+            <option value="">Southhampton</option>
+            <option value="">Westbrom</option>
+            <option value="">Newcastle</option>
+            </select>
+    </div>
+
+    <script>
+        document.getElementById("state").style.display = "none"
+        document.getElementById("usa").style.display = "none"
+        document.getElementById("uk").style.display = "none"
+
+        function world(){
+            var country = document.getElementById("country").value
+            var state = document.getElementById("state").value
+            var usa = document.getElementById("usa").value
+            var uk = document.getElementById("uk").value
+            if(country === "Nigeria"){
+                document.getElementById("state").style.display = "block"
+                document.getElementById("usa").style.display = "none"
+                document.getElementById("uk").style.display = "none"
+            }
+            else if(country === "America"){
+                document.getElementById("usa").style.display = "block"
+                document.getElementById("state").style.display = "none"
+                document.getElementById("uk").style.display = "none"
+            }
+            else if(country === "London"){
+                document.getElementById("uk").style.display = "block"
+                document.getElementById("usa").style.display = "none"
+                document.getElementById("state").style.display = "none"
+            }
+
+            else{
+                document.getElementById("usa").style.display = "none"
+            }
+    
+            
+        }
+    </script>
+</body>
+</html>

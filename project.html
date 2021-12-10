@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .head{
+            background-image: url();
+            background-repeat: no-repeat;
+            background-size: 100% 150%;
+        }
+
+    </style>
+
+
+
+    <title>Project</title>
+</head>
+<body class="head"><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h1 style="text-align: center;font-size: 65px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color:white">AGE VALIDATION FORM</h1><br><br><br><br><br><br>
+
+   <div style="text-align: center;">
+
+    <p id="message" style="font-size: 35px;color:whitesmoke; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"></p>
+    <input type="number" placeholder="Age" id="child" style="background-color:rgb(235, 230, 230); color:darkblue; height: 30px; border-radius: 70px;width: 500px; font-size: 20px;"><br><br>
+    <button onclick="submit()" style="background-color: rgb(235, 230, 230); color: rgba(111, 75, 243, 0.63); font-size: 20px;">Verify</button>
+
+   </div>
+
+    <script>
+        function submit(){
+            var child = document.getElementById("child").value
+
+            if(child === ""){
+                document.getElementById("message").innerHTML = "Input required"
+                document.getElementById("message").style="color:red; font-family:cursive; font-size:50px;" 
+            }
+            else if(child <= 17 && child >= 1){
+                document.getElementById("message").innerHTML = "User is a child"
+                document.getElementById("message").style="color:green; font-family:cursive; font-size:50px"
+            }
+            else if(child >= 18 && child <= 29){
+                document.getElementById("message").innerHTML = "User is a teenager"
+                document.getElementById("message").style="color:yellow; font-family:cursive; font-size:50px"
+            }
+            else if(child >= 30 && child <= 79){
+                document.getElementById("message").innerHTML = "User is an adult"
+                document.getElementById("message").style="color:brown; font-family:cursive; font-size:50px"
+            }
+            else{
+                document.getElementById("message").innerHTML = "Age not validated"
+                document.getElementById("message").style="color:red; font-family:cursive; font-size:50px"
+
+            }
+           
+            
+        }
+    </script>
+</body>
+</html>

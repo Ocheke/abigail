@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Conventional function or function declaration
+        function adds(firstNumber, secondNumber, thirdNumber){
+            return firstNumber + secondNumber - thirdNumber    
+        }
+        document.write(adds(10,12,2))
+        document.write("<br>")
+
+        //Arrow function
+        var adds = (firstNumber, secondNumber, thirdNumber) =>{
+            return firstNumber + secondNumber - thirdNumber
+        }
+        document.write(adds(10,12,2))
+        document.write("<br>")
+
+        //Function expression
+        var adds = function(firstNumber, secondNumber, thirdNumber){
+            return firstNumber + secondNumber - thirdNumber
+        }
+        document.write(adds(10,12,2))
+        document.write("<br>")
+
+
+        //Classwork
+        //conventional function
+        function myName(name){
+            return ("My name is " + name);
+        }
+        document.write(myName("Abraham" ))
+        document.write("<br>")
+
+        //arrow function
+        var myName = (name) =>{
+            return ("My name is " + name)
+        }
+        document.write(myName("Abraham"))
+        document.write("<br>")
+
+        //Function expression
+        var myName = function(name){
+            return ("My name is " + name)
+        }
+        document.write(myName("Abraham"))
+
+    </script>
+</body>
+</html>

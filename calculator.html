@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculator App</h1>
+    <input type="number" placeholder="enter first number" required id="firstnumber">
+    <br><input type="number" placeholder="enter second number" required  id="secondnumber" >
+    <br><input type="number" placeholder="answer" required id="answer" readonly>
+    <br><button onclick="addnumber()">Add</button>
+    <button onclick="subtractnumber()">Subtract</button>
+    <button onclick="dividenumber()">Divide</button>
+    <button onclick="multiplynumber()">Multiplication</button>
+    <button onclick="modnumber()">Modulo</button>
+
+    <script>
+        function addnumber(){
+            var firstnumber = document.getElementById("firstnumber").value
+            var secondnumber = document.getElementById("secondnumber").value
+            var answer = Number(firstnumber) + Number(secondnumber)
+            document.getElementById("answer").value = answer
+        }
+        function subtractnumber(){
+            var firstnumber = document.getElementById("firstnumber").value
+            var secondnumber = document.getElementById("secondnumber").value
+            var answer = Number(firstnumber) - Number(secondnumber)
+            document.getElementById("answer").value = answer
+        }
+        function dividenumber(){
+            var firstnumber = document.getElementById("firstnumber").value
+            var secondnumber = document.getElementById("secondnumber").value
+            var answer = Number(firstnumber) / Number(secondnumber)
+            document.getElementById("answer").value = answer
+        }
+        function multiplynumber(){
+            var firstnumber = document.getElementById("firstnumber").value
+            var secondnumber = document.getElementById("secondnumber").value
+            var answer = Number(firstnumber) * Number(secondnumber)
+            document.getElementById("answer").value = answer
+        }
+        function modnumber(){
+            var firstnumber = document.getElementById("firstnumber").value
+            var secondnumber = document.getElementById("secondnumber").value
+            var answer = Number(firstnumber) % Number(secondnumber)
+            document.getElementById("answer").value = answer
+        }
+    </script>
+</body>
+</html>

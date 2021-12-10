@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         axios.get('https://tbhpwebdevapi.azurewebsites.net/api/Bonsai')
+        .then(res => console.log(res.data))
+        .catch(err => console.log(err))
+        
+        axios.post('https://jsonplaceholder.typicode.com/posts', {title: 'my new title', body: 'my new body'})
+        .then(res => console.log(res.data))
+        .catch(err => console.log(err))
+
+        axios.post('https://tbhpwebdevapi.azurewebsites.net/api/Order/simple/save/usingFormData', {clientName: 'jerry',productPrice: 300, productName:'book',id:'6', qty:'8'})
+        .then(res => console.log(res.data))
+        .catch(err => console.log(err))
+    </script>
+</body>
+</html>
